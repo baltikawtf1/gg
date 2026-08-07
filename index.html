@@ -3,120 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BRICK — Архитектурный Гибкий Кирпич</title>
+  <title>Гибкий Кирпич — Яркое Решение</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <!-- Фон сетка -->
-  <div class="bg-grid"></div>
 
   <!-- Навигация -->
   <header class="navbar">
     <div class="container nav-container">
-      <a href="#" class="logo">BRICK<span>.STUDIO</span></a>
-      <a href="#catalog" class="nav-link">Каталог <span>03</span></a>
+      <a href="#" class="logo">BRICK<span>BOX</span></a>
+      <a href="#catalog" class="nav-btn">Каталог ★</a>
     </div>
   </header>
 
   <!-- Главный баннер -->
   <section class="hero">
-    <div class="container hero-container">
-      <div class="hero-tag">// ARCHITECTURAL FACADE MATERIALS</div>
-      <h1 class="hero-title">ГИБКИЙ<br>КЛИНКЕР</h1>
-      <p class="hero-desc">Премиальная отделка фасадов и интерьеров с фактурой натурального камня. Невесомый, гибкий и вечный материал.</p>
-      
-      <div class="hero-footer">
-        <a href="#catalog" class="btn-main">ВЫБРАТЬ ФАКТУРУ</a>
-        <div class="hero-specs">
-          <div><span>— 85%</span> Кварцевый песок</div>
-          <div><span>— 25 ЛЕТ</span> Гарантия</div>
+    <div class="container">
+      <div class="hero-card">
+        <span class="hero-badge">ГИБКИЙ КИРПИЧ ОТ ПРОИЗВОДИТЕЛЯ</span>
+        <h1>МЕНЯЙ СТИЛЬ СТЕН ЗА 1 ДЕНЬ</h1>
+        <p>Легкий, прочный и нереально гибкий материал для фасадов и крутых интерьеров.</p>
+        
+        <div class="hero-actions">
+          <a href="#catalog" class="btn-yellow">ВЫБРАТЬ ЦВЕТ</a>
+          <a href="#features" class="btn-white">ПОЧЕМУ ЭТО КРУТО?</a>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Преимущества -->
-  <section class="features container">
-    <div class="feature-item">
-      <div class="feature-num">/01</div>
-      <h3>Ультрагибкость</h3>
-      <p>Принимает форму любых аршинных углов, колонн и радиусных элементов фасада.</p>
+  <section id="features" class="features container">
+    <div class="feature-box box-orange">
+      <div class="feature-tag">01 / ГИБКОСТЬ</div>
+      <h3>ГНЕТСЯ КАК ХОЧЕШЬ</h3>
+      <p>Огибает любые углы, арки и колонны без трещин и сложных подгонок.</p>
     </div>
-    <div class="feature-item">
-      <div class="feature-num">/02</div>
-      <h3>3.5 кг / м²</h3>
-      <p>Минимальный вес. Не требует усиления фундамента и несущих стен.</p>
+    <div class="feature-box box-purple">
+      <div class="feature-tag">02 / ВЕС</div>
+      <h3>ЛЕГЧЕ ПЕРЫШКА</h3>
+      <p>Всего 3 кг на квадратный метр. Не нагружает стены и клеится за пару часов.</p>
     </div>
-    <div class="feature-item">
-      <div class="feature-num">/03</div>
-      <h3>-50°C ... +110°C</h3>
-      <p>Абсолютная стойкость к морозу, влаге, резким перепадам температур и УФ.</p>
+    <div class="feature-box box-green">
+      <div class="feature-tag">03 / НАДЕЖНОСТЬ</div>
+      <h3>НЕ БОИТСЯ НИЧЕГО</h3>
+      <p>Ни мороза -50°C, ни жары, ни воды, ни выгорания на ярком солнце.</p>
     </div>
   </section>
 
   <!-- Каталог -->
   <section id="catalog" class="catalog container">
-    <div class="catalog-header">
-      <h2>КОЛЛЕКЦИИ</h2>
-      <span>[ КАТАЛОГ ФАКТУР ]</span>
+    <div class="catalog-title">
+      <h2>ХИТЫ ПРОДАЖ</h2>
     </div>
 
     <div class="product-grid">
       
       <!-- Карточка 1 -->
-      <div class="product-card">
-        <div class="card-preview texture-clinker">
-          <span class="card-tag">BESTSELLER</span>
+      <div class="product-card card-red">
+        <div class="card-image red-pattern">
+          <span class="badge-pop">TOP</span>
         </div>
-        <div class="card-body">
-          <div class="card-title-row">
-            <h3>ROUGE VINTAGE</h3>
-            <span class="code">REF: 801</span>
-          </div>
-          <p>Классический терракотовый клинкер с легким обжиговым нагаром.</p>
-          <div class="card-action">
-            <div class="price">850 <span>₽/м²</span></div>
-            <button class="btn-card" onclick="openModal('ROUGE VINTAGE', 850)">ЗАКАЗАТЬ</button>
+        <div class="card-content">
+          <h3>КРАСНЫЙ КЛИНКЕР</h3>
+          <p>Сочный классический оттенок для дерзкого и стильного фасада.</p>
+          <div class="card-bottom">
+            <div class="price-tag">850 ₽/м²</div>
+            <button class="btn-buy" onclick="openModal('Красный Клинкер', 850)">ХОЧУ</button>
           </div>
         </div>
       </div>
 
       <!-- Карточка 2 -->
-      <div class="product-card">
-        <div class="card-preview texture-bavaria">
-          <span class="card-tag">PREMIUM</span>
+      <div class="product-card card-yellow">
+        <div class="card-image yellow-pattern">
+          <span class="badge-pop">NEW</span>
         </div>
-        <div class="card-body">
-          <div class="card-title-row">
-            <h3>BAVARIA DARK</h3>
-            <span class="code">REF: 904</span>
-          </div>
-          <p>Глубокая шоколадно-пепельная палитра с контрастными переходами.</p>
-          <div class="card-action">
-            <div class="price">950 <span>₽/м²</span></div>
-            <button class="btn-card" onclick="openModal('BAVARIA DARK', 950)">ЗАКАЗАТЬ</button>
+        <div class="card-content">
+          <h3>ЯНТАРНЫЙ МИКС</h3>
+          <p>Теплая песочно-янтарная гамма. Добавляет свет и уют в любой проект.</p>
+          <div class="card-bottom">
+            <div class="price-tag">950 ₽/м²</div>
+            <button class="btn-buy" onclick="openModal('Янтарный Микс', 950)">ХОЧУ</button>
           </div>
         </div>
       </div>
 
       <!-- Карточка 3 -->
-      <div class="product-card">
-        <div class="card-preview texture-loft">
-          <span class="card-tag">MODERN</span>
+      <div class="product-card card-blue">
+        <div class="card-image blue-pattern">
+          <span class="badge-pop">HIT</span>
         </div>
-        <div class="card-body">
-          <div class="card-title-row">
-            <h3>CONCRETE GRAPHITE</h3>
-            <span class="code">REF: 302</span>
-          </div>
-          <p>Минималистичная фактура с эффектом индустриального бетона.</p>
-          <div class="card-action">
-            <div class="price">900 <span>₽/м²</span></div>
-            <button class="btn-card" onclick="openModal('CONCRETE GRAPHITE', 900)">ЗАКАЗАТЬ</button>
+        <div class="card-content">
+          <h3>ТЕМНЫЙ ГРАФИТ</h3>
+          <p>Мощный и глубокий темный цвет для топовых лофтов и фасадных акцентов.</p>
+          <div class="card-bottom">
+            <div class="price-tag">900 ₽/м²</div>
+            <button class="btn-buy" onclick="openModal('Темный Графит', 900)">ХОЧУ</button>
           </div>
         </div>
       </div>
@@ -126,38 +112,35 @@
 
   <!-- Модальное окно -->
   <div id="orderModal" class="modal">
-    <div class="modal-box">
-      <button class="close-btn" onclick="closeModal()">&#x2715;</button>
+    <div class="modal-card">
+      <button class="close-btn" onclick="closeModal()">✕</button>
       
-      <div class="modal-title">
-        <span>ОФОРМЛЕНИЕ ЗАЯВКИ</span>
-        <h3 id="selectedProductText">ТОВАР НЕ ВЫБРАН</h3>
-      </div>
+      <h2>БЫСТРЫЙ ЗАКАЗ</h2>
+      <p id="selectedProductText" class="modal-sub">Товар не выбран</p>
 
       <form id="orderForm" onsubmit="submitForm(event)">
         <input type="hidden" id="productInput" name="product">
         
-        <div class="input-field">
-          <label>ПЛОЩАДЬ (М²)</label>
-          <input type="number" id="area" placeholder="Например: 50" min="1" required oninput="calculateTotal()">
+        <div class="form-field">
+          <label>СКОЛЬКО КВАДРАТОВ (М²)?</label>
+          <input type="number" id="area" placeholder="Например: 25" min="1" required oninput="calculateTotal()">
         </div>
 
-        <div class="calc-box">
-          <span>ИТОГО:</span>
-          <strong id="totalPrice">0 ₽</strong>
+        <div class="total-banner">
+          ИТОГО: <span id="totalPrice">0 ₽</span>
         </div>
 
-        <div class="input-field">
-          <label>ВАШЕ ИМЯ</label>
-          <input type="text" id="name" placeholder="Константин" required>
+        <div class="form-field">
+          <label>КАК ВАС ЗОВУТ?</label>
+          <input type="text" id="name" placeholder="Введите имя" required>
         </div>
 
-        <div class="input-field">
-          <label>ТЕЛЕФОН</label>
+        <div class="form-field">
+          <label>ТЕЛЕФОН ДЛЯ СВЯЗИ</label>
           <input type="tel" id="phone" placeholder="+7 (999) 000-00-00" required>
         </div>
 
-        <button type="submit" class="btn-main full-width">ОТПРАВИТЬ РАСЧЕТ</button>
+        <button type="submit" class="btn-submit">ОТПРАВИТЬ ЗАЯВКУ!</button>
       </form>
     </div>
   </div>
