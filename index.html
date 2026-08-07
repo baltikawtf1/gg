@@ -3,96 +3,144 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Продажа гибкого кирпича</title>
+  <title>Премиальный Гибкий Кирпич</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Шапка сайта -->
-  <header class="header">
-    <div class="container">
-      <div class="logo">ГибкийКирпич</div>
-      <a href="#catalog" class="btn-primary">Смотреть каталог</a>
+  <!-- Навигация -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">BRICK<span>FLEX</span></a>
+      <a href="#catalog" class="btn-secondary">Каталог</a>
     </div>
   </header>
 
   <!-- Главный баннер -->
   <section class="hero">
-    <div class="container">
-      <h1>Гибкий кирпич от производителя</h1>
-      <p>Современный материал для отделки фасадов и интерьеров. Легкий монтаж, долговечность, устойчивость к любой погоде.</p>
-      <a href="#catalog" class="btn-hero">Выбрать фактуру</a>
+    <div class="container hero-content">
+      <span class="badge">Экологичный & Долговечный</span>
+      <h1>Гибкий кирпич для фасадов и интерьера</h1>
+      <p>Идеальная имитация натуральной кладки. Легкий, гибкий и устойчивый к любым температурным перепадам материал от производителя.</p>
+      <div class="hero-actions">
+        <a href="#catalog" class="btn-primary">Рассчитать стоимость</a>
+        <a href="#features" class="btn-outline">Преимущества</a>
+      </div>
     </div>
   </section>
 
   <!-- Преимущества -->
-  <section class="features container">
+  <section id="features" class="features container">
     <div class="feature-card">
+      <div class="feature-icon">⚡</div>
+      <h3>Быстрый монтаж</h3>
+      <p>Укладывается на обычный плиточный клей без сложного инструмента.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🛡️</div>
+      <h3>Всепогодный</h3>
+      <p>Не выгорает на солнце, устойчив к влаге и морозам от -45°C до +110°C.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🌿</div>
       <h3>Легкий вес</h3>
-      <p>Не создает нагрузки на стены и фундамент.</p>
-    </div>
-    <div class="feature-card">
-      <h3>Устойчивость</h3>
-      <p>Не боится мороза, влаги и УФ-лучей.</p>
-    </div>
-    <div class="feature-card">
-      <h3>Простой монтаж</h3>
-      <p>Наклеивается на обычный плиточный клей.</p>
+      <p>Масса всего ~3-4 кг/м² — минимальная нагрузка на стены.</p>
     </div>
   </section>
 
-  <!-- Каталог товаров -->
+  <!-- Каталог -->
   <section id="catalog" class="catalog container">
-    <h2>Каталог продукции</h2>
+    <div class="section-title">
+      <h2>Популярные фактуры</h2>
+      <p>Выберите вариант для вашего проекта</p>
+    </div>
+
     <div class="product-grid">
       
       <!-- Карточка 1 -->
       <div class="product-card">
-        <div class="product-img-placeholder">Фото: Классический Красный</div>
-        <h3>Классический Красный</h3>
-        <p class="price">850 руб / кв.м</p>
-        <button class="btn-select" onclick="openModal('Классический Красный')">Заказать</button>
+        <div class="product-badge">Хит продаж</div>
+        <div class="product-img-placeholder red-brick">
+          <span>Классика</span>
+        </div>
+        <div class="product-info">
+          <h3>Классический Красный</h3>
+          <p class="product-desc">Традиционный теракотовый оттенок с легкой текстурой состаривания.</p>
+          <div class="product-bottom">
+            <div class="price">850 ₽ <span>/ м²</span></div>
+            <button class="btn-select" onclick="openModal('Классический Красный', 850)">Заказать</button>
+          </div>
+        </div>
       </div>
 
       <!-- Карточка 2 -->
       <div class="product-card">
-        <div class="product-img-placeholder">Фото: Баварская Кладка</div>
-        <h3>Баварская Кладка</h3>
-        <p class="price">950 руб / кв.м</p>
-        <button class="btn-select" onclick="openModal('Баварская Кладка')">Заказать</button>
+        <div class="product-img-placeholder bavaria-brick">
+          <span>Премиум</span>
+        </div>
+        <div class="product-info">
+          <h3>Баварская Кладка</h3>
+          <p class="product-desc">Сложная градиентная расцветка с переливами от темно-коричневого к песочному.</p>
+          <div class="product-bottom">
+            <div class="price">950 ₽ <span>/ м²</span></div>
+            <button class="btn-select" onclick="openModal('Баварская Кладка', 950)">Заказать</button>
+          </div>
+        </div>
       </div>
 
       <!-- Карточка 3 -->
       <div class="product-card">
-        <div class="product-img-placeholder">Фото: Лофт Белый</div>
-        <h3>Лофт Белый</h3>
-        <p class="price">900 руб / кв.м</p>
-        <button class="btn-select" onclick="openModal('Лофт Белый')">Заказать</button>
+        <div class="product-img-placeholder white-brick">
+          <span>Модерн</span>
+        </div>
+        <div class="product-info">
+          <h3>Скандинавский Белый</h3>
+          <p class="product-desc">Чистый свежий стиль. Идеально подходит для интерьеров в стиле Лофт.</p>
+          <div class="product-bottom">
+            <div class="price">900 ₽ <span>/ м²</span></div>
+            <button class="btn-select" onclick="openModal('Скандинавский Белый', 900)">Заказать</button>
+          </div>
+        </div>
       </div>
 
     </div>
   </section>
 
-  <!-- Модальное окно заявки -->
+  <!-- Модальное окно -->
   <div id="orderModal" class="modal">
     <div class="modal-content">
-      <span class="close-btn" onclick="closeModal()">&times;</span>
-      <h2>Оформление заявки</h2>
-      <p id="selectedProductText">Товар: </p>
+      <button class="close-btn" onclick="closeModal()">&times;</button>
+      <div class="modal-header">
+        <h3>Оформить расчет</h3>
+        <p id="selectedProductText">Товар не выбран</p>
+      </div>
 
       <form id="orderForm" onsubmit="submitForm(event)">
         <input type="hidden" id="productInput" name="product">
         
-        <label for="area">Площадь (кв. м):</label>
-        <input type="number" id="area" placeholder="Например: 45" required min="1">
+        <div class="form-group">
+          <label for="area">Площадь (м²)</label>
+          <input type="number" id="area" placeholder="Например: 35" min="1" required oninput="calculateTotal()">
+        </div>
 
-        <label for="name">имя:</label>
-        <input type="text" id="name" placeholder="Иван" required>
+        <div class="total-calc">
+          Примерная стоимость: <span id="totalPrice">0 ₽</span>
+        </div>
 
-        <label for="phone">Номер телефона:</label>
-        <input type="tel" id="phone" placeholder="+7 (999) 000-00-00" required>
+        <div class="form-group">
+          <label for="name">Ваше имя</label>
+          <input type="text" id="name" placeholder="Александр" required>
+        </div>
 
-        <button type="submit" class="btn-submit">Отправить расчет</button>
+        <div class="form-group">
+          <label for="phone">Номер телефона</label>
+          <input type="tel" id="phone" placeholder="+7 (999) 000-00-00" required>
+        </div>
+
+        <button type="submit" class="btn-primary btn-full">Отправить заявку</button>
       </form>
     </div>
   </div>
