@@ -3,104 +3,120 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Гибкий Кирпич — Фасадные и Интерьерные Решения</title>
+  <title>BRICK — Архитектурный Гибкий Кирпич</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Фон сетка -->
+  <div class="bg-grid"></div>
 
   <!-- Навигация -->
   <header class="navbar">
     <div class="container nav-container">
-      <a href="#" class="logo">TERRA<span>BRICK</span></a>
-      <a href="#catalog" class="btn-outline">Каталог</a>
+      <a href="#" class="logo">BRICK<span>.STUDIO</span></a>
+      <a href="#catalog" class="nav-link">Каталог <span>03</span></a>
     </div>
   </header>
 
   <!-- Главный баннер -->
   <section class="hero">
-    <div class="container hero-content">
-      <span class="hero-subtitle">Архитектурная отделка нового поколения</span>
-      <h1>Гибкий клинкерный кирпич от производителя</h1>
-      <p>Натуральный мраморный кварц и полимеры. Устойчив к любым климатическим условиям, прост в монтаже и сохраняет безупречный вид более 25 лет.</p>
-      <div class="hero-actions">
-        <a href="#catalog" class="btn-primary">Рассчитать стоимость</a>
-        <a href="#features" class="btn-text">Узнать преимущества &rarr;</a>
+    <div class="container hero-container">
+      <div class="hero-tag">// ARCHITECTURAL FACADE MATERIALS</div>
+      <h1 class="hero-title">ГИБКИЙ<br>КЛИНКЕР</h1>
+      <p class="hero-desc">Премиальная отделка фасадов и интерьеров с фактурой натурального камня. Невесомый, гибкий и вечный материал.</p>
+      
+      <div class="hero-footer">
+        <a href="#catalog" class="btn-main">ВЫБРАТЬ ФАКТУРУ</a>
+        <div class="hero-specs">
+          <div><span>— 85%</span> Кварцевый песок</div>
+          <div><span>— 25 ЛЕТ</span> Гарантия</div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Преимущества -->
-  <section id="features" class="features container">
-    <div class="feature-card">
-      <span class="feature-num">01</span>
-      <h3>Экологичный состав</h3>
-      <p>На 85% состоит из натуральной мраморной крошки и экологически безопасных связующих компонентов.</p>
+  <section class="features container">
+    <div class="feature-item">
+      <div class="feature-num">/01</div>
+      <h3>Ультрагибкость</h3>
+      <p>Принимает форму любых аршинных углов, колонн и радиусных элементов фасада.</p>
     </div>
-    <div class="feature-card">
-      <span class="feature-num">02</span>
-      <h3>Устойчивость к климату</h3>
-      <p>Выдерживает экстремальные температуры от -50°C до +120°C, не выгорает под прямыми солнечными лучами.</p>
+    <div class="feature-item">
+      <div class="feature-num">/02</div>
+      <h3>3.5 кг / м²</h3>
+      <p>Минимальный вес. Не требует усиления фундамента и несущих стен.</p>
     </div>
-    <div class="feature-card">
-      <span class="feature-num">03</span>
-      <h3>Легкий монтаж</h3>
-      <p>Минимальная нагрузка на фасад. Легко режется обычными ножницами и монтируется на плиточный клей.</p>
+    <div class="feature-item">
+      <div class="feature-num">/03</div>
+      <h3>-50°C ... +110°C</h3>
+      <p>Абсолютная стойкость к морозу, влаге, резким перепадам температур и УФ.</p>
     </div>
   </section>
 
   <!-- Каталог -->
   <section id="catalog" class="catalog container">
-    <div class="section-title">
-      <h2>Коллекции и Фактуры</h2>
-      <p>Выберите идеальное текстурное решение для фасада или интерьера</p>
+    <div class="catalog-header">
+      <h2>КОЛЛЕКЦИИ</h2>
+      <span>[ КАТАЛОГ ФАКТУР ]</span>
     </div>
 
     <div class="product-grid">
       
       <!-- Карточка 1 -->
       <div class="product-card">
-        <div class="product-preview brick-red">
-          <div class="preview-tag">Классика</div>
+        <div class="card-preview texture-clinker">
+          <span class="card-tag">BESTSELLER</span>
         </div>
-        <div class="product-info">
-          <h3>Терракотовый Клинкер</h3>
-          <p class="product-desc">Традиционная кирпичная текстура с естественным меланжевым переливом оттенков.</p>
-          <div class="product-bottom">
-            <div class="price">850 ₽ <span>/ м²</span></div>
-            <button class="btn-select" onclick="openModal('Терракотовый Клинкер', 850)">Заказать</button>
+        <div class="card-body">
+          <div class="card-title-row">
+            <h3>ROUGE VINTAGE</h3>
+            <span class="code">REF: 801</span>
+          </div>
+          <p>Классический терракотовый клинкер с легким обжиговым нагаром.</p>
+          <div class="card-action">
+            <div class="price">850 <span>₽/м²</span></div>
+            <button class="btn-card" onclick="openModal('ROUGE VINTAGE', 850)">ЗАКАЗАТЬ</button>
           </div>
         </div>
       </div>
 
       <!-- Карточка 2 -->
       <div class="product-card">
-        <div class="product-preview brick-bavaria">
-          <div class="preview-tag">Премиум</div>
+        <div class="card-preview texture-bavaria">
+          <span class="card-tag">PREMIUM</span>
         </div>
-        <div class="product-info">
-          <h3>Баварский Микс</h3>
-          <p class="product-desc">Благородное сочетание темного шоколада, обожженного кирпича и песчаных тонов.</p>
-          <div class="product-bottom">
-            <div class="price">950 ₽ <span>/ м²</span></div>
-            <button class="btn-select" onclick="openModal('Баварский Микс', 950)">Заказать</button>
+        <div class="card-body">
+          <div class="card-title-row">
+            <h3>BAVARIA DARK</h3>
+            <span class="code">REF: 904</span>
+          </div>
+          <p>Глубокая шоколадно-пепельная палитра с контрастными переходами.</p>
+          <div class="card-action">
+            <div class="price">950 <span>₽/м²</span></div>
+            <button class="btn-card" onclick="openModal('BAVARIA DARK', 950)">ЗАКАЗАТЬ</button>
           </div>
         </div>
       </div>
 
       <!-- Карточка 3 -->
       <div class="product-card">
-        <div class="product-preview brick-white">
-          <div class="preview-tag">Модерн</div>
+        <div class="card-preview texture-loft">
+          <span class="card-tag">MODERN</span>
         </div>
-        <div class="product-info">
-          <h3>Скандинавский Графит</h3>
-          <p class="product-desc">Современный светлый оттенок с мягкой шероховатой поверхностью для лофт-интерьеров.</p>
-          <div class="product-bottom">
-            <div class="price">900 ₽ <span>/ м²</span></div>
-            <button class="btn-select" onclick="openModal('Скандинавский Графит', 900)">Заказать</button>
+        <div class="card-body">
+          <div class="card-title-row">
+            <h3>CONCRETE GRAPHITE</h3>
+            <span class="code">REF: 302</span>
+          </div>
+          <p>Минималистичная фактура с эффектом индустриального бетона.</p>
+          <div class="card-action">
+            <div class="price">900 <span>₽/м²</span></div>
+            <button class="btn-card" onclick="openModal('CONCRETE GRAPHITE', 900)">ЗАКАЗАТЬ</button>
           </div>
         </div>
       </div>
@@ -110,36 +126,38 @@
 
   <!-- Модальное окно -->
   <div id="orderModal" class="modal">
-    <div class="modal-content">
-      <button class="close-btn" onclick="closeModal()">&times;</button>
-      <div class="modal-header">
-        <h3>Расчет стоимости</h3>
-        <p id="selectedProductText">Товар не выбран</p>
+    <div class="modal-box">
+      <button class="close-btn" onclick="closeModal()">&#x2715;</button>
+      
+      <div class="modal-title">
+        <span>ОФОРМЛЕНИЕ ЗАЯВКИ</span>
+        <h3 id="selectedProductText">ТОВАР НЕ ВЫБРАН</h3>
       </div>
 
       <form id="orderForm" onsubmit="submitForm(event)">
         <input type="hidden" id="productInput" name="product">
         
-        <div class="form-group">
-          <label for="area">Площадь покрытия (м²)</label>
-          <input type="number" id="area" placeholder="Введите площадь, например: 40" min="1" required oninput="calculateTotal()">
+        <div class="input-field">
+          <label>ПЛОЩАДЬ (М²)</label>
+          <input type="number" id="area" placeholder="Например: 50" min="1" required oninput="calculateTotal()">
         </div>
 
-        <div class="total-calc">
-          Итоговая стоимость: <span id="totalPrice">0 ₽</span>
+        <div class="calc-box">
+          <span>ИТОГО:</span>
+          <strong id="totalPrice">0 ₽</strong>
         </div>
 
-        <div class="form-group">
-          <label for="name">Ваше имя</label>
+        <div class="input-field">
+          <label>ВАШЕ ИМЯ</label>
           <input type="text" id="name" placeholder="Константин" required>
         </div>
 
-        <div class="form-group">
-          <label for="phone">Контактный телефон</label>
+        <div class="input-field">
+          <label>ТЕЛЕФОН</label>
           <input type="tel" id="phone" placeholder="+7 (999) 000-00-00" required>
         </div>
 
-        <button type="submit" class="btn-primary btn-full">Отправить расчет</button>
+        <button type="submit" class="btn-main full-width">ОТПРАВИТЬ РАСЧЕТ</button>
       </form>
     </div>
   </div>
