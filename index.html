@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гибкий Кирпич — Просторный и удобный каталог</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Навигация -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">BRICK<span>STUDIO</span></a>
+      <nav class="nav-links">
+        <a href="#features">Преимущества</a>
+        <a href="#catalog" class="btn-nav">Каталог кирпича</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Баннер -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-wrapper">
+        <span class="badge">Прямые поставки от производителя</span>
+        <h1>Гибкий кирпич для фасадов и интерьеров</h1>
+        <p>Современный материал с реалистичной текстурой натуральной кладки. Легкий, гибкий и нетребовательный к монтажу.</p>
+        <div class="hero-actions">
+          <a href="#catalog" class="btn-primary">Перейти в каталог</a>
+          <a href="#features" class="btn-secondary">Узнать подробнее</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Преимущества -->
+  <section id="features" class="features container">
+    <div class="feature-card">
+      <div class="feature-icon">01</div>
+      <h3>Простой монтаж</h3>
+      <p>Наклеивается на любые поверхности без усиления фундамента и сложных технологий.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">02</div>
+      <h3>Минимальный вес</h3>
+      <p>Всего ~3.5 кг на м². Не утяжеляет стены и снижает стоимость транспортировки.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">03</div>
+      <h3>Стойкость к погоде</h3>
+      <p>Не боится морозов, влаги, УФ-лучей и перепадов температур от -50°C до +110°C.</p>
+    </div>
+  </section>
+
+  <!-- Каталог -->
+  <section id="catalog" class="catalog container">
+    <div class="section-title">
+      <h2>Коллекции гибкого кирпича</h2>
+      <p>Нажмите «Заказать» для быстрого расчета стоимости под вашу площадь</p>
+    </div>
+
+    <div class="product-grid">
+      
+      <!-- Карточка 1 -->
+      <div class="product-card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1000&q=80" alt="Классический Терракот">
+          <span class="card-tag">Хит продаж</span>
+        </div>
+        <div class="card-content">
+          <h3>Классический Терракот</h3>
+          <p>Насыщенный традиционный оттенок с выразительной текстурой обжигового кирпича. Идеально для фасадов.</p>
+          <div class="card-footer">
+            <div class="price">850 ₽ <span>/ м²</span></div>
+            <button class="btn-card" onclick="openModal('Классический Терракот', 850)">Заказать расчет</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карточка 2 -->
+      <div class="product-card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=1000&q=80" alt="Баварская Кладка">
+          <span class="card-tag">Премиум</span>
+        </div>
+        <div class="card-content">
+          <h3>Баварская Кладка</h3>
+          <p>Благородные контрастные переходы от темного шоколада до песочного оттенка. Придает объем стенам.</p>
+          <div class="card-footer">
+            <div class="price">950 ₽ <span>/ м²</span></div>
+            <button class="btn-card" onclick="openModal('Баварская Кладка', 950)">Заказать расчет</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Карточка 3 -->
+      <div class="product-card">
+        <div class="card-image">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80" alt="Скандинавский Графит">
+          <span class="card-tag">Лофт & Модерн</span>
+        </div>
+        <div class="card-content">
+          <h3>Скандинавский Графит</h3>
+          <p>Стильный и строгий темный тон. Отлично сочетается с деревом, стеклом и современным освещением.</p>
+          <div class="card-footer">
+            <div class="price">900 ₽ <span>/ м²</span></div>
+            <button class="btn-card" onclick="openModal('Скандинавский Графит', 900)">Заказать расчет</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Модальное окно -->
+  <div id="orderModal" class="modal">
+    <div class="modal-box">
+      <button class="close-btn" onclick="closeModal()">&times;</button>
+      
+      <div class="modal-header">
+        <h3>Оформление заказа</h3>
+        <p id="selectedProductText">Товар не выбран</p>
+      </div>
+
+      <form id="orderForm" onsubmit="submitForm(event)">
+        <input type="hidden" id="productInput" name="product">
+        
+        <div class="form-group">
+          <label>Площадь стен (м²)</label>
+          <input type="number" id="area" placeholder="Например: 50" min="1" required oninput="calculateTotal()">
+        </div>
+
+        <div class="total-box">
+          <span>Предварительный расчет:</span>
+          <strong id="totalPrice">0 ₽</strong>
+        </div>
+
+        <div class="form-group">
+          <label>Ваше имя</label>
+          <input type="text" id="name" placeholder="Иван" required>
+        </div>
+
+        <div class="form-group">
+          <label>Номер телефона</label>
+          <input type="tel" id="phone" placeholder="+7 (999) 000-00-00" required>
+        </div>
+
+        <button type="submit" class="btn-primary full-width">Отправить заявку</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
