@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Продажа гибкого кирпича</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Шапка сайта -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">ГибкийКирпич</div>
+      <a href="#catalog" class="btn-primary">Смотреть каталог</a>
+    </div>
+  </header>
+
+  <!-- Главный баннер -->
+  <section class="hero">
+    <div class="container">
+      <h1>Гибкий кирпич от производителя</h1>
+      <p>Современный материал для отделки фасадов и интерьеров. Легкий монтаж, долговечность, устойчивость к любой погоде.</p>
+      <a href="#catalog" class="btn-hero">Выбрать фактуру</a>
+    </div>
+  </section>
+
+  <!-- Преимущества -->
+  <section class="features container">
+    <div class="feature-card">
+      <h3>Легкий вес</h3>
+      <p>Не создает нагрузки на стены и фундамент.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Устойчивость</h3>
+      <p>Не боится мороза, влаги и УФ-лучей.</p>
+    </div>
+    <div class="feature-card">
+      <h3>Простой монтаж</h3>
+      <p>Наклеивается на обычный плиточный клей.</p>
+    </div>
+  </section>
+
+  <!-- Каталог товаров -->
+  <section id="catalog" class="catalog container">
+    <h2>Каталог продукции</h2>
+    <div class="product-grid">
+      
+      <!-- Карточка 1 -->
+      <div class="product-card">
+        <div class="product-img-placeholder">Фото: Классический Красный</div>
+        <h3>Классический Красный</h3>
+        <p class="price">850 руб / кв.м</p>
+        <button class="btn-select" onclick="openModal('Классический Красный')">Заказать</button>
+      </div>
+
+      <!-- Карточка 2 -->
+      <div class="product-card">
+        <div class="product-img-placeholder">Фото: Баварская Кладка</div>
+        <h3>Баварская Кладка</h3>
+        <p class="price">950 руб / кв.м</p>
+        <button class="btn-select" onclick="openModal('Баварская Кладка')">Заказать</button>
+      </div>
+
+      <!-- Карточка 3 -->
+      <div class="product-card">
+        <div class="product-img-placeholder">Фото: Лофт Белый</div>
+        <h3>Лофт Белый</h3>
+        <p class="price">900 руб / кв.м</p>
+        <button class="btn-select" onclick="openModal('Лофт Белый')">Заказать</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Модальное окно заявки -->
+  <div id="orderModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2>Оформление заявки</h2>
+      <p id="selectedProductText">Товар: </p>
+
+      <form id="orderForm" onsubmit="submitForm(event)">
+        <input type="hidden" id="productInput" name="product">
+        
+        <label for="area">Площадь (кв. м):</label>
+        <input type="number" id="area" placeholder="Например: 45" required min="1">
+
+        <label for="name">имя:</label>
+        <input type="text" id="name" placeholder="Иван" required>
+
+        <label for="phone">Номер телефона:</label>
+        <input type="tel" id="phone" placeholder="+7 (999) 000-00-00" required>
+
+        <button type="submit" class="btn-submit">Отправить расчет</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
